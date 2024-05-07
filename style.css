@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.hero {
+  background: rgba(0, 0, 0, 0.3);
+  max-height: 100dvh;
+}
+
+.hero-video {
+  z-index: -1;
+  position: relative;
+}
+
+.centered {
+  position: absolute;
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Poppins";
+}
+
+.hero-text {
+  font-weight: 700;
+  font-size: 5rem;
+  transform: translate(-50%, -50%);
+}
+
+.hero-subtext {
+  font-weight: 400;
+  font-size: 3rem;
+  font-style: italic;
+  transform: translate(-50%, 50%);
+}
+
+.about {
+  background-image: linear-gradient(#393e46, #00adb5);
+  height: 100dvh;
+}
+
+.about-photo {
+  height: 40dvh;
+  display: flex;
+  margin: auto;
+  border-radius: 50%;
+  border: 5px cyan solid;
+}
+
+.about-text {
+  position: relative;
+  color: white;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.projects {
+  min-height: 100dvh;
+  background-image: linear-gradient(#00adb5, #393e46);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  transition: transform 0.2s;
+  margin: 2rem;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+footer {
+  color: #eeeeee;
+}
+
+@media (max-width: 1200px) {
+  .hero-text {
+    font-size: 3rem;
+    transform: translate(-50%, -250%);
+  }
+
+  .hero-subtext {
+    font-size: 2rem;
+    transform: translate(-50%, -250%);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-text {
+    transform: translate(-50%, -350%);
+  }
+
+  .hero-subtext {
+    transform: translate(-50%, -400%);
+  }
+}
+
+@media (max-width: 650px) {
+  .hero-text {
+    font-size: 2rem;
+    transform: translate(-50%, -750%);
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+    transform: translate(-50%, -1300%);
+  }
+}
